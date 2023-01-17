@@ -1,0 +1,8 @@
+NOT IN USE
+
+
+docker pull mongo
+docker volume create mongo_volume
+docker run --name toy_mongodb -d mongo
+docker exec -it toy_mongodb bash
+docker run -it -v mongo_volume:/data/db --name toy_mongodb -d mongo
